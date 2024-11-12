@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebab Society</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+	<script src="https://foodish-js.netlify.app/js/images.js"></script>
+	<script src="https://foodish-js.netlify.app/js/foodish.js"></script>
+</head>
+<body>
+    <header class="bg-danger text-center text-white py-4">
+		<h1 class="header-title" id="greeting">Loading...</h1>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Kebab Society</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul id="navMenu" class="navbar-nav ms-auto">
+						<li class="nav-item" tabindex="0">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li class="nav-item" tabindex="0">
+							<a class="nav-link" href="about.html">About Us</a>
+						</li>
+						<li class="nav-item" id="loginItem" tabindex="0">
+							<a class="nav-link" href="login.html">Login</a>
+						</li>
+						<li class="nav-item" id="registerItem" tabindex="0">
+							<a class="nav-link" href="register.html">Register</a>
+						</li>
+						<li class="nav-item" id="logoutItem" tabindex="0" style="display: none;">
+							<a class="nav-link" href="javascript:void(0);" id="logoutLink">Logout</a>
+						</li>
+						<li class="nav-item" id="profileItem" tabindex="0" style="display: none;">
+							<a class="nav-link" href="profile.html">Profile</a>
+						</li>
+					</ul>
+					<button id="themeToggleBtn" class="btn btn-secondary ms-3" aria-label="Toggle Dark/Light Theme">
+						<img id="themeIcon" src="sun-icon.png" alt="Theme Toggle" width="30" height="30">
+					</button>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+    <main class="container mt-5">
+        <div id="carouselExampleControls" class="carousel slide mb-5" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="pepito.png" class="d-block w-100 carousel-image" alt="Pasta Pépito">
+				</div>
+				<div class="carousel-item">
+					<img src="risotto.jpg" class="d-block w-100 carousel-image" alt="Risotto with tomatoes">
+				</div>
+				<div class="carousel-item">
+					<img src="meat.jpg" class="d-block w-100 carousel-image" alt="Marinated meat">
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+        <section class="bg-light p-4 rounded shadow mb-4">
+            <div class="col-lg-6">
+                <h2 class="section-head">What is Kebab Society</h2>
+                <p class="section-text">Dining at The Kebab Society is an experience. For decades we have invested meticulous attention to our unique menu and top-notch food. It’s the perfect place for a family celebration, a group event, or a special dinner date.</p>
+            </div>
+        </section>
+			
+		<section class="bg-light p-4 rounded shadow mb-4">	
+            <div class="col-lg-6">
+                <h2 class="section-head">Quote</h2>
+                <blockquote class="blockquote">"There are 3 things that are important in life: good food, friendship and cute animals." — Egor Markin</blockquote>
+            </div>
+        </section>
+
+		<section class="bg-light p-4 rounded shadow mb-4">
+			<h2>Filter Dishes</h2>
+			<div class="form-group">
+				<label for="dishType">Select Dish Type:</label>
+				<select id="dishType" class="form-select">
+					<option value="">All</option>
+					<option value="pasta">Pasta</option>
+					<option value="meat">Meat</option>
+					<option value="risotto">Risotto</option>
+				</select>
+			</div>
+		</section>
+
+        <section class="row mb-4">
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="pepito.png" class="card-img-top" alt="Pasta Pépito">
+                    <div class="card-body">
+                        <h5 class="card-title">Pasta Pépito</h5>
+                        <p class="card-text">Our signature dish: Pasta Pépito.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="risotto.jpg" class="card-img-top" alt="Risotto with tomatoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Risotto</h5>
+                        <p class="card-text">Risotto with fresh tomatoes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card">
+                    <img src="meat.jpg" class="card-img-top" alt="Marinated meat">
+                    <div class="card-body">
+                        <h5 class="card-title">Marinated Meat</h5>
+                        <p class="card-text">Meat marinated in honey, mustard, garlic and onion with buckwheat on the side and marinara sauce.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-warning p-4 rounded shadow mb-4">
+            <div class="col">
+                <h2 class="section-head">Trending Dishes</h2>
+                <ul class="list-group">
+                    <li class="list-group-item">Fried Pasta</li>
+                    <li class="list-group-item">Pasta à la Italian</li>
+                    <li class="list-group-item">Pasta in Cream Sauce</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="bg-warning p-4 rounded shadow mb-4">
+            <div class="col">
+                <h2 class="section-head">Top 3 Highest Rated Foods</h2>
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">Pasta Pépito</li>
+                    <li class="list-group-item">Minnesotan Soup</li>
+                    <li class="list-group-item">Pasta à la Italian</li>
+                </ol>
+            </div>
+        </section>
+		
+		<section class="bg-warning p-4 rounded shadow mb-4">
+			<h2>Our Delicious Pasta</h2>
+			<img id="foodish" alt="foodish" class="d-block w-100 border border-light rounded"/>
+			<script type="text/javascript">
+			  getFoodish("pasta");
+			</script>
+		</section>
+		
+		<section class="bg-light p-4 rounded shadow mb-4">
+			<h2>Search for Food</h2>
+			<div class="form-group">
+				<label for="searchInput">Search Food:</label>
+				<input type="text" id="searchInput" class="form-control" placeholder="Search food...">
+			</div>
+			<div class="form-group mt-3">
+				<label for="categoryFilter">Filter by Category:</label>
+				<select id="categoryFilter" class="form-select">
+					<option value="">All</option>
+					<option value="pasta">Pasta</option>
+					<option value="meat">Meat</option>
+					<option value="risotto">Risotto</option>
+				</select>
+			</div>
+			<div id="foodList" class="mt-4"></div>
+		</section>
+		
+		<section class="bg-warning p-4 rounded shadow mb-4">
+		<section class="bg-light p-3 rounded">
+			<div id="rating-stars">
+				<img class="star" data-value="1" src="star-empty.png" alt="1 star">
+				<img class="star" data-value="2" src="star-empty.png" alt="2 stars">
+				<img class="star" data-value="3" src="star-empty.png" alt="3 stars">
+				<img class="star" data-value="4" src="star-empty.png" alt="4 stars">
+				<img class="star" data-value="5" src="star-empty.png" alt="5 stars">
+			</div>
+			<p id="rating-text"></p>
+		</section>
+		</section>
+    </main>
+
+    <footer class="bg-danger text-white text-center py-3">
+        <p>Team Members: Rustemdastan Beisenov (IT-2308), Egor Markin (image provider), Foodish (image provider)</p>
+        <p>September 2024 Kebab Society</p>
+		<p id="currentDateTime" class="mt-4"></p>
+    </footer>
+	
+	<script src="bgcolor.js"></script>
+	<script src="subscribe.js"></script>
+	<script src="datetime.js"></script>
+	<script src="timebutton.js"></script>
+	<script src="stars.js"></script>
+	<script src="navmenu.js"></script>
+	<script src="greeting.js"></script>
+	<script src="filter.js"></script>
+	<script src="foodsearch.js"></script>
+	<script src="logout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
